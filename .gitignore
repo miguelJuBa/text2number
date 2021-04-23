@@ -1,5 +1,8 @@
 # Prerequisites
 *.d
+# My custom dev directories
+.code
+build
 
 # Compiled Object files
 *.slo
