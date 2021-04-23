@@ -19,5 +19,7 @@ make
 
 Just invocate the newly created binary:
 ```bash
-./src/text2number
+docker run --rm -it -v <path/to/project/root>:/opt text2number:dev bash
+
+./build/src/text2number
 ```
