@@ -2,7 +2,7 @@
 FROM ubuntu:bionic
 
 RUN apt-get update && \
-    apt-get -y install clang cmake && \
+    apt-get -y install clang cmake libboost-all-dev && \
     rm -rf /var/lib/apt/lists/*
 
 # We could build here the application, but is more practical for CI to use
