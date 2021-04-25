@@ -23,6 +23,20 @@ namespace Tools
 
             return tokenVector;
         }
+
+        std::string textToLowercase(const std::string &text)
+        {
+            std::string textInLowercase = text;
+            std::transform(textInLowercase.begin(), textInLowercase.end(), textInLowercase.begin(),
+            [](unsigned char c){ return std::tolower(c); });
+            
+            return textInLowercase;
+        }
+
+        void textTrim(std::string &text)
+        {
+            boost::trim_right(text);
+        }
     }
 }
 
