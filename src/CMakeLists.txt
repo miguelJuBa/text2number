@@ -1,5 +1,6 @@
 add_executable(text2number main.cpp 
     MainApp.cpp
+    TextToNumberTranslator.cpp
 )
 
 include_directories(${text2number_SOURCE_DIR}/include)
