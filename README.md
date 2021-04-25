@@ -11,16 +11,15 @@ docker run --rm -it -v <path/to/project/root>:/opt text2number:dev bash
 # Build using cmake
 mkdir build
 cd build
-cmake ..
+cmake -DCMAKE_BUILD_TYPE=Release ..
 make
 ```
 
 ## How to run
-
 Just invocate the newly created binary:
 ```bash
 docker run --rm -it -v <path/to/project/root>:/opt text2number:dev bash
 
-./build/src/text2number
+./build/src/text2number 'I have one hundred and one apples'
 ```
 
