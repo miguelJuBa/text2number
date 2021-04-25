@@ -31,7 +31,7 @@ std::string mainApp::MainApp::parseCommandlineParameters(int numberOfParameters,
     }
 
     std::string textToProcess(parameters[1]);
-    BOOST_LOG_TRIVIAL(info) << "Text to process -" << textToProcess << "-";
+    BOOST_LOG_TRIVIAL(debug) << "Text to process -" << textToProcess << "-";
     if(textToProcess.empty())
     {
         throw std::runtime_error("Application does not accepts empty text");
