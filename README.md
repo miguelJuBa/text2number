@@ -20,6 +20,6 @@ Just invocate the newly created binary:
 ```bash
 docker run --rm -it -v <path/to/project/root>:/opt text2number:dev bash
 
-./build/src/text2number 'I have one hundred and one apples'
+./src/text2number 'I have one hundred and one apples'
 ```
 
