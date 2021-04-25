@@ -2,13 +2,14 @@
 #define __H_MAIN_APP__
 
 #include <string>
+#include "ITranslator.hpp"
 
 namespace mainApp
 {
     class MainApp
     {
         public:
-            MainApp();
+            MainApp(translators::ITranslator &translator);
             ~MainApp();
 
             // Calling this method with the input paramerts from main function will
@@ -19,6 +20,8 @@ namespace mainApp
             std::string parseCommandlineParameters(int numberOfParameters, char ** parameters);
 
             std::string m_textToTranslate;
+            translators::ITranslator &m_translator;
+
     };
 }
 

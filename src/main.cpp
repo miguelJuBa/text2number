@@ -1,10 +1,12 @@
 #include <boost/log/trivial.hpp>
 
 #include "MainApp.h"
+#include "TextToNumberTranslator.h"
 
 int main(int argc, char ** argv)
 {
-    mainApp::MainApp app;
+    translators::TextToNumberTranslator translator;
+    mainApp::MainApp app(translator);
 
     try
     {

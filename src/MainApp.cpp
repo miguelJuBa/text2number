@@ -4,7 +4,7 @@
 #include "MainApp.h"
 
 
-mainApp::MainApp::MainApp()
+mainApp::MainApp::MainApp(translators::ITranslator &translator) : m_translator(translator)
 {
     
 }
@@ -18,6 +18,8 @@ void mainApp::MainApp::run(int argc, char ** argv)
 {
     BOOST_LOG_TRIVIAL(debug) << "Running application...";
     m_textToTranslate = parseCommandlineParameters(argc, argv);
+    std::string textTranslated = m_translator.translate(m_textToTranslate);
+    BOOST_LOG_TRIVIAL(info) << "Text2Number: " << textTranslated;
 }
 
 std::string mainApp::MainApp::parseCommandlineParameters(int numberOfParameters, char ** parameters)
